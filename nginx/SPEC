@@ -1,0 +1,5 @@
+export VERSION=0.7.65
+export SRCURL=http://nginx.org/download/nginx-0.7.65.tar.gz
+export APP=nginx
+export TARFILE=$APP-$VERSION.tar.gz
+export TARDIR=$APP-$VERSION
