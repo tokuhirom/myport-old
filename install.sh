@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-if [ $# == 0 ];then
+if [ $# = 0 ];then
     echo "Usage: install.sh pkgname";
     exit
 fi
@@ -38,6 +38,12 @@ if [ ! -d $PKGNAME/build ]; then
     mkdir -p $PKGNAME/build
 fi
 cd $PKGNAME/build/
+
+# 前処理
+if [ -f ../prepare.sh ]; then
+    . ../prepare.sh
+fi
+
 if [ -f ../install.sh ]; then
     . ../install.sh
 else
