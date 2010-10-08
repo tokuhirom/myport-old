@@ -15,7 +15,7 @@ function install_autotools () {
 
     tar xzvf $TARFILE
     cd $TARDIR
-    ./configure --prefix=/usr/local/app/$APP-$VERSION
+    ./configure --prefix=/usr/local/app/$APP-$VERSION $CONFIGURE_OPTS
     make
     make install
 }

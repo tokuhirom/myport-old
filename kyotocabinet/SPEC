@@ -1,5 +1,5 @@
-export VERSION=1.0.0
+export VERSION=1.0.1
 export APP=kyotocabinet
 export TARFILE=$APP-$VERSION.tar.gz
-export SRCURL=http://1978th.net/kyotocabinet/kyotocabinet-1.0.0.tar.gz
+export SRCURL=http://1978th.net/kyotocabinet/kyotocabinet-1.0.1.tar.gz
 export TARDIR=$APP-$VERSION

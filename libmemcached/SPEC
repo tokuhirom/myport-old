@@ -1,0 +1,7 @@
+export VERSION=0.40
+export SRCURL=http://launchpad.net/libmemcached/1.0/0.40/+download/libmemcached-0.40.tar.gz
+export APP=libmemcached
+export TARFILE=$APP-$VERSION.tar.gz
+export TARDIR=$APP-$VERSION
+export CONFIGURE_OPTS=
+

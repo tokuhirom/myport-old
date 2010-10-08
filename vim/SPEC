@@ -1,0 +1,5 @@
+export VERSION=7.3
+export SRCURL=ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
+export APP=vim
+export TARFILE=$APP-$VERSION.tar.bz2
+export TARDIR=$APP-$VERSION

@@ -1,0 +1,5 @@
+export VERSION=2.3.0
+export SRCURL=http://protobuf.googlecode.com/files/protobuf-2.3.0.tar.bz2
+export APP=protobuf
+export TARFILE=$APP-$VERSION.tar.bz2
+export TARDIR=$APP-$VERSION
