@@ -1,6 +1,7 @@
-export VERSION=0.8.1
+export VERSION=0.9.7
 export SRCURL=http://fallabs.com/kyototycoon/pkg/kyototycoon-$VERSION.tar.gz
 export APP=kyototycoon
 export TARFILE=$APP-$VERSION.tar.gz
 export TARDIR=$APP-$VERSION
+export CONFIGURE_OPTS=--enable-lua
 

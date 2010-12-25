@@ -1,4 +1,4 @@
-export VERSION=1.2.16
+export VERSION=1.2.24
 export APP=kyotocabinet
 export TARFILE=$APP-$VERSION.tar.gz
 export SRCURL=http://fallabs.com/kyotocabinet/pkg/kyotocabinet-$VERSION.tar.gz
