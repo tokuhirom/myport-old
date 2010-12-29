@@ -6,6 +6,7 @@ use File::Path;
 use File::stat;
 use LWP::UserAgent;
 use File::Basename;
+use Cwd;
 
 if (@ARGV == 0) {
     die "Usage: install.pl pkgname";
@@ -63,6 +64,9 @@ sub prefix () {
 sub infof {
     print "[INFO] @_\n";
 }
+sub debugf {
+    print "[INFO] @_\n" if $ENV{DEBUG};
+}
 
 sub run {
     infof("run: @_");
@@ -91,15 +95,18 @@ sub extract {
     system "tar xvf $TARBALL";
 
     opendir my $d, ".";
-    while (readdir $d) {
-        next if /^\./;
-        if (-d $_) {
-            infof("chdir to $_");
-            chdir $_;
+    while (my $e = readdir $d) {
+        next if $e =~ /^\./;
+        if (-d $e) {
+            infof("chdir to $e");
+            chdir $e;
             return;
+        } else {
+            debugf("$e is not a directory");
         }
     }
     closedir $d;
+    die "cannot find the extracted dir in " . Cwd::getcwd();
 }
 
 sub activate {
