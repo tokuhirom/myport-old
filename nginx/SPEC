@@ -1,7 +1,0 @@
-export VERSION=0.8.48
-export SRCURL=http://nginx.org/download/nginx-0.8.48.tar.gz
-export APP=nginx
-export TARFILE=$APP-$VERSION.tar.gz
-export TARDIR=$APP-$VERSION
-CONFIGURE_OPTS=--with-http_stub_status_module --with-http_dav_module
-export CONFIGURE_OPTS

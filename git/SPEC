@@ -1,6 +1,0 @@
-export VERSION=1.7.2.1
-export TARFILE=git-$VERSION.tar.gz
-export SRCURL=http://kernel.org/pub/software/scm/git/git-1.7.2.1.tar.gz
-export TARDIR=git-$VERSION
-export APP=git
-
