@@ -1,5 +1,0 @@
-export VERSION=0.3.3
-export APP=mpio
-export TARFILE=$APP-$VERSION.tar.gz
-export SRCURL=http://github.com/downloads/frsyuki/mpio/mpio-0.3.3.tar.gz
-export TARDIR=$APP-$VERSION
