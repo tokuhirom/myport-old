@@ -115,10 +115,11 @@ sub activate {
     # ln -s $PREFIX/$APP-$VERSION $PREFIX/$APP
    symlink prefix(), "$base_prefix/$pkgname";
 
-    for my $dir (qw/lib bin include/) {
+    for my $dir (qw/lib bin include libexec/) {
         if (-d "$base_prefix/$pkgname/$dir") {
             for (<$base_prefix/$pkgname/$dir/*>) {
                 my $basename = basename($_);
+                mkpath "/usr/local/$dir" unless -d "/usr/local/$dir";
                 my $dst = "/usr/local/$dir/$basename";
                 if (-e $dst) {
                     infof("skip link $_ to $dst, since it is already exists.");
