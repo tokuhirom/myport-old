@@ -133,6 +133,14 @@ sub activate {
     run "sudo /sbin/ldconfig";
 }
 
+sub configure {
+    run './configure', '--prefix=' . prefix(), @_;
+}
+
+sub make {
+    run 'make', @_;
+}
+
 __END__
 function install_autotools () {
     if [ ! -f $TARFILE ]; then

@@ -1,5 +1,0 @@
-export VERSION=1.0.4
-export APP=groonga
-export TARFILE=$APP-$VERSION.tar.gz
-export SRCURL=http://groonga.org/files/groonga/groonga-1.0.4.tar.gz
-export TARDIR=$APP-$VERSION
