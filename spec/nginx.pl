@@ -4,8 +4,8 @@ sub install {
     if (-f "/etc/debian_version") {
         run "sudo aptitude -y install libpcre3-dev libssl-dev";
     }
-    run './configure', qw/--with-http_stub_status_module --with-http_dav_module/, '--prefix=' . prefix;
-    run 'make';
-    run 'make install';
+    configure(qw/--with-http_stub_status_module --with-http_dav_module/);
+    make;
+    make 'install';
 }
 

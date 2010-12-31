@@ -38,7 +38,13 @@ my $URL;
 eval($src) or die $@;
 get($URL);
 extract();
-install();
+if (__PACKAGE__->can('install')) {
+    install();
+} else {
+    configure();
+    make();
+    make('install');
+}
 activate();
 exit 0;
 
